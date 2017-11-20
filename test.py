@@ -5,7 +5,7 @@ def sql_csv(data):
     sqlLoadData = 'LOAD DATA LOCAL INFILE "csv?%s" INTO TABLE tablename ' % data
     sqlLoadData += 'FIELDS TERMINATED BY "," LINES TERMINATED BY "\n"'
     sqlLoadData += 'IGNORE 1 LINES \n'
-#    sqlLoadData += 'ENCLOSED BY ' + '\"' + 'ESCAPED BY "\" '
+    sqlLoadData += 'ENCLOSED BY ' + '\"' + 'ESCAPED BY "\" '
 
     try:
         con = pymysql.connect('localhost', 'root', '2272as8a2', 'ground')
